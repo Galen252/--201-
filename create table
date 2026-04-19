@@ -5,3 +5,6 @@ INSERT INTO car( model, price , km , year) VALUES ('Audi rs5', '6500000', '5000'
         
 CREATE TABLE users ( id SERIAL PRIMARY KEY, name VARCHAR(50), date TIMESTAMP DEFAULT NOW());  #создаем таблицу с пользователями 
 INSERT INTO users(name) VALUES ('Стив алмазов'), ('Bob Alma'), ('Piter Graf'), ('Maksim Inshin');   #заполняяем данными 
+
+CREATE TABLE users (id SERIAL PRIMARY KEY,name VARCHAR(50), contract_number INT DEFAULT floor(random() * 9000 + 1000)::int); 
+#бытка для номеров заказа 
