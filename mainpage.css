@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.left {
+    box-shadow: 0 0 20px #000000;
+    color: #000000;
+    border-radius: 10px;
+    width: 300px;
+}
+
+
+.center {
+    box-shadow: 0 0 20px #000000;
+    border-radius: 10px;
+    width: 1500px;
+}
+
+.left,
+.center {
+    padding: 10px;
+    height: 900px;
+}
+
+.tab-content {
+    color: #000000;
+    display: none;
+}
+
+.info {
+    color: #000000;
+    display: none;
+}
+
+.car {
+    line-height: 40px;
+}
+
+.rsphoto {
+    display: block;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.inf {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.car-info {
+    color: #000000;
+    display: none;
+}
+
+
+.rs7,
+.rs6,
+.rs5,
+.rs4,
+.tt h1 {
+    text-align: center;
+}
