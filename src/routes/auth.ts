@@ -5,7 +5,7 @@ import pool from '../database';
 
 const router = express.Router();
 
-// Расширяем интерфейс Request для добавления user
+
 interface UserPayload {
     id: number;
     name: string;
@@ -41,7 +41,7 @@ router.post("/register", async (req: Request, res: Response): Promise<Response> 
     }
 
     try {
-        // Проверяем существование пользователя
+        
         const userExists = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
 
         if (userExists.rows.length > 0) {
