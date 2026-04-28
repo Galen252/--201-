@@ -36,7 +36,7 @@ export const protect = async (
             });
         }
 
-        // Проверяем наличие JWT_SECRET
+        
         if (!process.env.JWT_SECRET) {
             console.error('JWT_SECRET is not defined');
             return res.status(500).json({
@@ -45,10 +45,10 @@ export const protect = async (
             });
         }
 
-        // Верифицируем токен
+        
         const decoded = jwt.verify(token, process.env.JWT_SECRET) as DecodedToken;
 
-        // Валидируем decoded данные
+        
         if (!decoded.id) {
             return res.status(401).json({
                 success: false,
@@ -56,7 +56,7 @@ export const protect = async (
             });
         }
 
-        // Получаем пользователя из БД
+        
         const result = await pool.query<UserFromDB>(
             'SELECT id, name FROM users WHERE id = $1',
             [decoded.id]
@@ -69,12 +69,12 @@ export const protect = async (
             });
         }
 
-        // Добавляем пользователя в объект запроса
+        
         req.user = result.rows[0];
         next();
 
     } catch (error) {
-        // Обработка специфичных ошибок JWT
+        
         if (error instanceof TokenExpiredError) {
             return res.status(401).json({
                 success: false,
@@ -89,7 +89,7 @@ export const protect = async (
             });
         }
 
-        // Общая ошибка
+        
         console.error('Authentication error:', error);
         return res.status(401).json({
             success: false,
