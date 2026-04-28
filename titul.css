@@ -3,6 +3,7 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    background-color: #ffffff;
 }
 
 .input-box {
@@ -29,5 +30,6 @@ body {
     background-color: transparent;
     color: #000000;
     cursor: pointer;
-    border: none;
+    border: 1px solid #000000;
+    border-radius: 10px;
 }
