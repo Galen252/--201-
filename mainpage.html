@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Автомагазин</title>
+        <link rel="stylesheet" href="mainpage.css">
+    </head>
+    <body>
+
+        <div class="header">
+            <span>Автомагазин</span>
+            <div class="header-right">
+                <span> продаж +7 908 993 83 46</span>
+                <span id="user-name"></span>
+                <button class="logout-btn" onclick="logout()">Выйти</button>
+            </div>
+        </div>
+
+        <div class="block">
+
+            <div class="left">
+                <div class="car" id="car-list">
+                    <p style="color:#000;">Загрузка...</p>
+                </div>
+            </div>
+
+            <div class="center">
+                <div id="cars-container"></div>
+            </div>
+
+        </div>
+
+        <script src="mainpage.js"></script>
+    </body>
+</html>
