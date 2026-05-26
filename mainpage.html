@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Автомагазин</title>
+        <link rel="stylesheet" href="mainpage.css">
+    </head>
+    <body>
+
+        <div class="header">
+            <span>Автомагазин</span>
+            <div class="header-right">
+                <span>Офис продаж +7 908 993 83 46 <a href="about.html">about</a> </span>
+                <span id="user-name"></span>
+                <button class="logout-btn" onclick="logout()">Выйти</button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <input id="f-yearFrom" type="number" placeholder="Год от">
+            <input id="f-yearTo"   type="number" placeholder="Год до">
+            <input id="f-priceFrom" type="number" placeholder="Цена от">
+            <input id="f-priceTo"   type="number" placeholder="Цена до">
+            <select id="f-sortBy">
+                <option value="price">По цене</option>
+                <option value="year">По году</option>
+                <option value="mileage">По пробегу</option>
+                <option value="brand">По марке</option>
+            </select>
+            <select id="f-sortOrder">
+                <option value="ASC">По возрастанию</option>
+                <option value="DESC">По убыванию</option>
+            </select>
+            <button onclick="applyFilters()">Найти</button>
+            <button onclick="resetFilters()">Сбросить</button>
+        </div>
+
+        <div class="block">
+            <div class="left">
+                <div class="car" id="car-list">
+                    <p style="color:#000;">Загрузка...</p>
+                </div>
+            </div>
+            <div class="center">
+                <div id="cars-container"></div>
+            </div>
+        </div>
+
+        <script src="mainpage.js"></script>
+    </body>
+</html>
