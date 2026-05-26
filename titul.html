@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Автомагазин</title>
+        <link rel="stylesheet" href="titul.css">
+    </head>
+    <body>
+        <div class="input-box">
+
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('login')">Вход</button>
+                <button class="tab" onclick="switchTab('register')">Регистрация</button>
+                <div class="slider" id="slider"></div>
+            </div>
+
+            <div id="panel-login">
+                <div><input class="login" type="text" placeholder="Введите логин"></div>
+                <div><input class="pass" type="password" placeholder="Введите пароль"></div>
+                <div><button class="button">Войти</button></div>
+            </div>
+
+            <div id="panel-register" class="hidden">
+                <div><input class="firstname" type="text" placeholder="Введите имя"></div>
+                <div><input class="lastname" type="text" placeholder="Введите фамилию"></div>
+                <div><input class="login" type="text" placeholder="Введите логин"></div>
+                <div><input class="pass" type="password" placeholder="Введите пароль"></div>
+                <div><input class="email" type="text" placeholder="Введите email"></div>
+                <div><input class="number" type="tel" placeholder="Введите телефон"></div>
+                <div><button class="button">Зарегестрироваться</button></div>
+            </div>
+
+        </div>
+
+        <script>
+            function switchTab(tab) {
+                const isLogin = tab === 'login';
+
+                document.getElementById('slider').classList.toggle('right', !isLogin);
+
+                document.querySelectorAll('.tab')[0].classList.toggle('active', isLogin);
+                document.querySelectorAll('.tab')[1].classList.toggle('active', !isLogin);
+
+                document.getElementById('panel-login').classList.toggle('hidden', !isLogin);
+                document.getElementById('panel-register').classList.toggle('hidden', isLogin);
+            }
+        </script>
+        <script src="auth.js"></script>
+    </body>
+</html>

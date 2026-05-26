@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0b0f30;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-btn {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.left {
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.center {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    width: 1500px;
+}
+
+.left,
+.center {
+    padding: 10px;
+    height: 900px;
+}
+
+.tab-content {
+    color: #000000;
+    display: none;
+}
+
+.car {
+    line-height: 40px;
+}
+
+.rsphoto {
+    display: block;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.inf {
+    display: flex;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.car-info {
+    color: #000000;
+    display: none;
+}
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.filters input,
+.filters select {
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #000;
+}
+
+.filters button {
+    padding: 5px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    background-color: #0b0f30;
+    color: #fff;
+}
+
+.filters button:last-child {
+    background-color: #888;
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}

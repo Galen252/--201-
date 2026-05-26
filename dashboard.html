@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Дашборд</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <span>Аналитика / Дашборд</span>
+    <a href="javascript:history.back()">← Назад</a>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h2>Автомобили по маркам</h2>
+        <canvas id="chartBrand"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>Сделки по статусам</h2>
+        <canvas id="chartDeals"></canvas>
+    </div>
+
+    <div class="card wide">
+        <h2>Продажи по месяцам (последние 6 мес.)</h2>
+        <canvas id="chartSales"></canvas>
+    </div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
