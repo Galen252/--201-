@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "target": "ES2015",
-    "module": "ES2015",
-    "strict": true,
-    "removeComments": false
-  },
-  "files": ["auth.ts"]
-}
